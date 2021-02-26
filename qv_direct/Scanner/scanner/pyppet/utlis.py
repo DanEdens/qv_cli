@@ -97,7 +97,7 @@ async def screenshot(self, sensor='_', name_selector='_'):
     :return: 
     """
     if sensor in os.environ['imagelist']:
-        from sitecheck.Scanner.scanner.pyppet import project_root
+        from qv_direct.Scanner.scanner.pyppet import project_root
         
         _date = os.environ['Nowdate']
         project_images = f"{project_root}\\Screenshots\\{self.project.name}\\"

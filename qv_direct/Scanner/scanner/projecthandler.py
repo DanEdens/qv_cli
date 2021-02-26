@@ -58,14 +58,14 @@ class Project_runner:
 
     async def __aenter__(self):
         await pyppet.launch(self)
-        os.environ['PREVIOUS_SENSOR'] = 0
+        os.environ['PREVIOUS_SENSOR'] = '0'
         return self
 
     async def __aexit__(self, exc_type, exc_val, exc_tb):
-        if os.environ['Detach']:
-            await self.browser.disconnect()
-        else:
-            await self.browser.close()
+        #if os.environ['Detach']:
+        await self.browser.disconnect()
+        # else:
+            # await self.browser.close()
 
     async def project_skip_handler(self):
         """

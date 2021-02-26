@@ -18,7 +18,7 @@ from . import options
 
 logger = logging.getLogger('utlis')
 
-filedate = os.environ['filedate']
+filedate = os.environ.get('filedate', 'TIME')
 
 
 def make_logger(name) -> object:

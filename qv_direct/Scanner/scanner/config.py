@@ -72,7 +72,7 @@ def file_dialog():
         options = {}
         options['defaultextension'] = '.ini'
         options['filetypes'] = [('ini config files', '.ini')]
-        options['initialdir'] = os.environ['ROOT_DIR']
+        options['initialdir'] = os.environ.get('ROOT_DIR', '~')
         options['initialfile'] = 'projects.ini'
         options['title'] = 'Select Project Configuration File'
         root = tkinter.Tk()

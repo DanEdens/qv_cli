@@ -16,7 +16,7 @@ from . import utlis
 
 logger = logging.getLogger('config')
 projects = config.read_config_file()
-version = utlis.get_version()
+version = '0.1'
 
 ROOT_card: str = utlis.ensure_exists(
     str(Path(os.environ.get('OneDriveCommercial', '~') + "//Scanner//"))
@@ -96,8 +96,8 @@ parser.add_argument('-H', '--headless', action='store_false',
                     default=os.environ.get('SCANNER_HEADLESS', True),
                     help=arg_text.headless)
 
-parser.add_argument('-a', '--autoclose', action='store_true',
-                    default=os.environ.get('SCANNER_AUTOCLOSE', True),
+parser.add_argument('-a', '--autoclose', action='store_false',
+                    default=os.environ.get('SCANNER_AUTOCLOSE', False),
                     help=argparse.SUPPRESS)  # help=arg_text.hadless)
 
 

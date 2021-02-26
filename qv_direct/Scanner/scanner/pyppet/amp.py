@@ -6,8 +6,8 @@ import os
 
 logger = logging.getLogger('chrome')
 amp = logging.getLogger('chrome')
-from sitecheck.Scanner.scanner import data
-from sitecheck.Scanner.scanner import options
+from qv_direct.Scanner.scanner import data
+from qv_direct.Scanner.scanner import options
 from . import sites
 from . import utlis
 from .text import Amp_text

@@ -8,7 +8,7 @@ import dateutil.parser
 from dateutil.parser import parse
 from pyppeteer.errors import *
 
-from sitecheck.Scanner.scanner import data
+from qv_direct.Scanner.scanner import data
 from . import sites
 from . import utlis
 from .text import Qv_text
@@ -36,7 +36,7 @@ class Qv_Webpage:
         try:
             await utlis.wait_hover(self.page, Qv_text.scrollbar)
         except TimeoutError as e:
-            logger.warning('Scanner/error', f"Sidebar Error- {e}", retain=True)
+            print('Scanner/error', f"Sidebar Error- {e}")
         await self.page.waitFor(750)
         await utlis.wait_type(self.page, '.wrapper #projectSearchInput',
                               self.project.name)
@@ -79,7 +79,8 @@ class Qv_Webpage:
                 logger.info('Navigating to view #' + view)
                 await utlis.click(self.page, Qv_text.thumb + view)
             await utlis.wait_count(self, 7)
-            await sites.scan_plan_view(self, Qv_Webpage)
+            
+        
 
     async def get_last_update(self):
         """

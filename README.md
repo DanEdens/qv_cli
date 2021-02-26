@@ -1,5 +1,5 @@
 
-![](sitecheck/docs/resources/logo-graphic.png?raw=true "Logo")
+![](qv_direct/docs/resources/logo-graphic.png?raw=true "Logo")
 
 # Sitecheck Scanner
 #### Intended for Geo-Instruments Internal use

@@ -14,7 +14,7 @@ import sys
 import pyppeteer.errors
 from pyppeteer import launch
 
-from sitecheck.Scanner.scanner import options
+from qv_direct.Scanner.scanner import options
 from . import text
 from . import utlis
 

@@ -19,7 +19,7 @@ from pathlib import Path
 from dateutil.parser import parse
 
 logger = logging.getLogger('generator')
-from sitecheck.Scanner.scanner import utlis
+from qv_direct.Scanner.scanner import utlis
 from . import template
 
 

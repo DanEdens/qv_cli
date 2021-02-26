@@ -15,10 +15,10 @@ import sys
 import paho.mqtt.client as mqtt
 from ptpython.repl import embed
 
-from sitecheck.Scanner.scanner import config
-from sitecheck.Scanner.scanner import options
-from sitecheck.Scanner.scanner import utlis
-from sitecheck.Scanner.scanner import endpoints
+from .scanner import config
+from .scanner import options
+from .scanner import utlis
+from .scanner import endpoints
 
 hostname = os.environ.get('SCANNER_IP', 'localhost')
 port = int(os.environ.get('SCANNER_port', 1884))
@@ -43,7 +43,7 @@ async def Scan():
     """
     Invoke to Scan all projects marked with "skip = false" in projects.ini
     """
-    from sitecheck.Scanner.scanner import projecthandler
+    from qv_direct.Scanner.scanner import projecthandler
 
     utlis.post(f'arguments', f"Scan Confirmed >> scanner {sys.argv}")
     utlis.post('ProjectTable',
