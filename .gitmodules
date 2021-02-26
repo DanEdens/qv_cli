@@ -1,0 +1,3 @@
+[submodule "sitecheck/Scanner/ScanData"]
+	path = sitecheck/Scanner/ScanData
+	url = git@ssh.dev.azure.com:v3/DanEdens/TexasJobs/ScanData
